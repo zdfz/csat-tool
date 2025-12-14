@@ -1,0 +1,20 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Riyadh",
+			"country": {
+				"code": "SA",
+				"name": "Saudi Arabia"
+			},
+			"subdivision": {
+				"code": "01",
+				"name": "Riyadh Region"
+			},
+			"timezone": "Asia/Riyadh",
+			"latitude": 24.6869,
+			"longitude": 46.7224
+		},
+		"timestamp": 1765624582705
+	},
+	"siteId": "173febb9-a95a-46b9-a342-146fff827fb7"
+}
