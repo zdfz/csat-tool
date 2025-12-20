@@ -131,6 +131,7 @@ function enrichShipmentData(shipment, mobile, cleanMobile, rowIndex) {
         // Shipment Info
         status: shipment.status || '',
         track_number: shipment.track_number || '',
+        customer_name: shipment.customer_name || '',
         service_code: shipment.service_code || '',
         order_reference: shipment.order_reference || '',
         customer_id_reference: shipment.customer_id_reference || '',

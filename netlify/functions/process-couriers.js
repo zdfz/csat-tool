@@ -127,7 +127,10 @@ function extractRiderInfo(events) {
         hub_code: deliveredEvent.hub_code || '',
         location: deliveredEvent.location || '',
         // Explicitly format delivery time to Riyadh
-        delivery_time_riyadh: toRiyadhTime(deliveredEvent.event_time_utc)
+        delivery_time_riyadh: toRiyadhTime(deliveredEvent.event_time_utc),
+        // Standard fields per validation
+        delivery_date: deliveredEvent.event_time_utc ? new Date(deliveredEvent.event_time_utc).toISOString().split('T')[0] : '',
+        delivery_time: deliveredEvent.event_time_utc ? new Date(deliveredEvent.event_time_utc).toISOString().split('T')[1].split('.')[0] : ''
     };
 }
 
