@@ -114,13 +114,7 @@ const Step1MobileEnrichment = () => {
 
                     const batchResults = response.data.results || [];
 
-                    // Merge backend results with original row data to preserve columns
-                    const mergedBatchResults = batchResults.map(result => {
-                        const originalRow = data[result.rowIndex];
-                        return { ...originalRow, ...result };
-                    });
-
-                    setResults(prev => [...prev, ...mergedBatchResults]);
+                    setResults(prev => [...prev, ...batchResults]);
 
                     processedCount += batch.length;
                     const currentProcessed = Math.min(processedCount, total);
