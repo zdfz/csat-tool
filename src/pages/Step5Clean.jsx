@@ -124,27 +124,10 @@ const Step5Clean = () => {
 
                         <div className="bg-neutral-50 p-4 rounded-lg border border-neutral-200 mt-2">
                             <div className="w-full">
-                                {params.trackingCol && data.length > 0 ? (
-                                    <div className="flex items-center justify-between text-sm">
-                                        <span className="text-neutral-600">
-                                            Auto-detected ID column: <span className="font-bold text-neutral-900">{params.trackingCol}</span>
-                                        </span>
-                                        <button
-                                            onClick={() => setParams({ ...params, trackingCol: '' })}
-                                            className="text-primary-600 hover:text-primary-800 text-xs font-medium"
-                                        >
-                                            Change
-                                        </button>
-                                    </div>
-                                ) : (
-                                    <>
-                                        <label className="text-xs font-semibold text-neutral-500">Column to Deduplicate By (e.g. Tracking Number):</label>
-                                        <select className="w-full mt-1 text-sm border-neutral-300 rounded shadow-sm focus:border-primary-500 focus:ring-primary-500" value={params.trackingCol} onChange={e => setParams({ ...params, trackingCol: e.target.value })}>
-                                            <option value="">Select Column...</option>
-                                            {Object.keys(data[0] || {}).map(k => <option key={k} value={k}>{k}</option>)}
-                                        </select>
-                                    </>
-                                )}
+                                <label className="text-xs font-semibold text-neutral-500">Deduplicate By:</label>
+                                <p className="mt-1 text-sm text-primary-700 bg-primary-50 px-2 py-1 rounded font-medium">
+                                    {params.trackingCol || <span className="text-red-500">⚠ track_number column not detected — check file headers</span>}
+                                </p>
                             </div>
                         </div>
                     </div>
