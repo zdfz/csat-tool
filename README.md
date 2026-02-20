@@ -166,7 +166,6 @@ Each step produces a downloadable `.xlsx` file that feeds into the next step, cr
 3. Extracts **rider/courier information** from the `delivered` event:
    - `worker_name`, `worker_code`, `worker_phone`, `vehicle_number`.
    - `hub_name`, `hub_code`, `location`.
-   - `delivery_time_riyadh` (UTC → Riyadh timezone, +3 hours).
    - `delivery_date`, `delivery_time`.
 4. Extracts a **detailed timeline** (all times converted to Riyadh timezone):
    - `first_hub_scan_time_riyadh`
