@@ -39,7 +39,7 @@ const Step5Clean = () => {
             const cols = parsedData[0] || {};
             const delCol = findColumnCaseInsensitive(cols, ['delivery_date', 'delivery date', 'delivered_time_riyadh']);
             const subCol = findColumnCaseInsensitive(cols, ['submitted', 'submitted_at', 'response date']);
-            const trackCol = findColumnCaseInsensitive(cols, ['track_number', 'tracking', 'shipment_id', 'mobile', 'phone']);
+            const trackCol = findColumnCaseInsensitive(cols, ['track_number', 'tracking_number', 'tracking number', 'track number', 'trackingnumber', 'awb', 'awb_number']);
 
             setParams(prev => ({
                 ...prev,
